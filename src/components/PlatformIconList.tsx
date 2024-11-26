@@ -1,16 +1,17 @@
-import { HStack, Icon, Text } from "@chakra-ui/react";
+import { Platform } from "@/hooks/useGames";
+import { HStack, Icon } from "@chakra-ui/react";
+import { BsGlobe } from "react-icons/bs";
+import { CiCircleQuestion } from "react-icons/ci";
 import {
-  FaWindows,
-  FaPlaystation,
-  FaXbox,
+  FaAndroid,
   FaApple,
   FaLinux,
-  FaAndroid,
+  FaPlaystation,
+  FaWindows,
+  FaXbox,
 } from "react-icons/fa";
 import { MdPhoneIphone } from "react-icons/md";
 import { TbCircleLetterN } from "react-icons/tb";
-import { BsGlobe } from "react-icons/bs";
-import { Platform } from "@/hooks/useGames";
 interface Props {
   platforms: Platform[];
 }
@@ -37,7 +38,7 @@ const PlatformIconList = ({ platforms }: Props) => {
       case "web":
         return <BsGlobe />;
       default:
-        return null;
+        return <CiCircleQuestion />;
     }
   };
 
