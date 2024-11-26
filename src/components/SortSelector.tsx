@@ -29,7 +29,7 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
   return (
     <MenuRoot>
       <MenuTrigger asChild>
-        <Button>
+        <Button variant="outline">
           <BsChevronDown />
           Order: by {currentSortOrder?.label || "Relevance"}
         </Button>
